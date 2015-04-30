@@ -20,6 +20,11 @@
     [super awakeWithContext:context];
 
     // Configure interface objects here.
+    
+    // Configure interface objects here.
+    
+    CGFloat width = self.contentFrame.size.width;
+    CGFloat height = self.contentFrame.size.height;
 }
 
 - (void)willActivate {
@@ -30,6 +35,24 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+}
+
+- (IBAction)launchVoiceQuery:(id)sender {
+    
+    NSArray *suggestions = @[
+                             @"Queues",
+                             @"Agent groups",
+                             @"Agents"
+                             ];
+    
+    [self presentTextInputControllerWithSuggestions:suggestions
+                                   allowedInputMode:WKTextInputModePlain
+                                         completion:^(NSArray *results) {
+                                             if (results && results.count > 0) {
+                                                 self.reportTitle.text = [results objectAtIndex:0];
+                                             }
+                                         }];
+    
 }
 
 @end

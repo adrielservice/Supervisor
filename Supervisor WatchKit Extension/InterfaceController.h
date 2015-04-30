@@ -9,6 +9,13 @@
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
 
+
 @interface InterfaceController : WKInterfaceController
+
+@property (weak, nonatomic) IBOutlet  WKInterfaceLabel *reportTitle;
+
+@property (weak, nonatomic) IBOutlet  WKInterfaceImage *reportVisualization;
+
+- (IBAction)launchVoiceQuery:(id)sender;
 
 @end
