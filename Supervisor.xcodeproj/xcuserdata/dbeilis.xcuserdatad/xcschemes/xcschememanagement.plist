@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Notification - Supervisor WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>Supervisor WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>Supervisor.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>138369111AF145C00096CB21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>138369341AF20C920096CB21</key>
 		<dict>
 			<key>primary</key>
 			<true/>

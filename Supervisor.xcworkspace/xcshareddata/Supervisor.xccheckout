@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>395A4E96-7890-44C0-AD85-A4C03B6E310D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Supervisor</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4F5B007DE196F194A6DC25FE53B33BD41AD31D26</key>
+		<string>https://github.com/adrielservice/Supervisor.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Supervisor.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4F5B007DE196F194A6DC25FE53B33BD41AD31D26</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/adrielservice/Supervisor.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4F5B007DE196F194A6DC25FE53B33BD41AD31D26</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4F5B007DE196F194A6DC25FE53B33BD41AD31D26</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Genesys%20Supervisor</string>
+		</dict>
+	</array>
+</dict>
+</plist>
