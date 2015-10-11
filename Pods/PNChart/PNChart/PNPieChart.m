@@ -15,13 +15,12 @@
 @property (nonatomic) NSArray *items;
 @property (nonatomic) NSArray *endPercentages;
 
-@property (nonatomic) CGFloat outerCircleRadius;
-@property (nonatomic) CGFloat innerCircleRadius;
-
 @property (nonatomic) UIView         *contentView;
 @property (nonatomic) CAShapeLayer   *pieLayer;
 @property (nonatomic) NSMutableArray *descriptionLabels;
 @property (strong, nonatomic) CAShapeLayer *sectorHighlight;
+
+@property (nonatomic, strong) NSMutableDictionary *selectedItems;
 
 - (void)loadDefault;
 
@@ -48,14 +47,16 @@
     self = [self initWithFrame:frame];
     if(self){
         _items = [NSArray arrayWithArray:items];
+        _selectedItems = [NSMutableDictionary dictionary];
         _outerCircleRadius  = CGRectGetWidth(self.bounds) / 2;
         _innerCircleRadius  = CGRectGetWidth(self.bounds) / 6;
-        
         _descriptionTextColor = [UIColor whiteColor];
         _descriptionTextFont  = [UIFont fontWithName:@"Avenir-Medium" size:18.0];
         _descriptionTextShadowColor  = [[UIColor blackColor] colorWithAlphaComponent:0.4];
         _descriptionTextShadowOffset =  CGSizeMake(0, 1);
         _duration = 1.0;
+        _shouldHighlightSectorOnTouch = YES;
+        _enableMultipleSelection = NO;
         
         [super setupDefaultValues];
         [self loadDefault];
@@ -85,12 +86,20 @@
     
     _pieLayer = [CAShapeLayer layer];
     [_contentView.layer addSublayer:_pieLayer];
+
+}
+
+/** Override this to change how inner attributes are computed. **/
+- (void)recompute {
+    self.outerCircleRadius = CGRectGetWidth(self.bounds) / 2;
+    self.innerCircleRadius = CGRectGetWidth(self.bounds) / 6;
 }
 
 #pragma mark -
 
 - (void)strokeChart{
     [self loadDefault];
+    [self recompute];
     
     PNPieChartDataItem *currentItem;
     for (int i = 0; i < _items.count; i++) {
@@ -144,6 +153,12 @@
         descriptionLabel.text = str ;
     }
     
+    //If value is less than cutoff, show no label
+    if ([self ratioForItemAtIndex:index] < self.labelPercentageCutoff )
+    {
+        descriptionLabel.text = nil;
+    }
+    
     CGPoint center = CGPointMake(_outerCircleRadius + distance * sin(rad),
                                  _outerCircleRadius - distance * cos(rad));
     
@@ -160,6 +175,10 @@
     descriptionLabel.alpha           = 0;
     descriptionLabel.backgroundColor = [UIColor clearColor];
     return descriptionLabel;
+}
+
+- (void)updateChartData:(NSArray *)items {
+    self.items = items;
 }
 
 - (PNPieChartDataItem *)dataItemForIndex:(NSUInteger)index{
@@ -272,31 +291,57 @@
     while (percentage > [self endPercentageForItemAtIndex:index]) {
         index ++;
     }
-
+    
     if ([self.delegate respondsToSelector:@selector(userClickedOnPieIndexItem:)]) {
         [self.delegate userClickedOnPieIndexItem:index];
     }
     
-    if (self.sectorHighlight) {
-        [self.sectorHighlight removeFromSuperlayer];
+    if (self.shouldHighlightSectorOnTouch)
+    {
+        if (!self.enableMultipleSelection)
+        {
+            if (self.sectorHighlight)
+                [self.sectorHighlight removeFromSuperlayer];
+        }
+        
+        PNPieChartDataItem *currentItem = [self dataItemForIndex:index];
+        
+        CGFloat red,green,blue,alpha;
+        UIColor *old = currentItem.color;
+        [old getRed:&red green:&green blue:&blue alpha:&alpha];
+        alpha /= 2;
+        UIColor *newColor = [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+        
+        CGFloat startPercnetage = [self startPercentageForItemAtIndex:index];
+        CGFloat endPercentage   = [self endPercentageForItemAtIndex:index];
+        
+        self.sectorHighlight = [self newCircleLayerWithRadius:_outerCircleRadius + 5
+                                                  borderWidth:10
+                                                    fillColor:[UIColor clearColor]
+                                                  borderColor:newColor
+                                              startPercentage:startPercnetage
+                                                endPercentage:endPercentage];
+        
+        if (self.enableMultipleSelection)
+        {
+            NSString *dictIndex = [NSString stringWithFormat:@"%d", index];
+            CAShapeLayer *indexShape = [self.selectedItems valueForKey:dictIndex];
+            if (indexShape)
+            {
+                [indexShape removeFromSuperlayer];
+                [self.selectedItems removeObjectForKey:dictIndex];
+            }
+            else
+            {
+                [self.selectedItems setObject:self.sectorHighlight forKey:dictIndex];
+                [_contentView.layer addSublayer:self.sectorHighlight];
+            }
+        }
+        else
+        {
+            [_contentView.layer addSublayer:self.sectorHighlight];
+        }
     }
-    PNPieChartDataItem *currentItem = [self dataItemForIndex:index];
-    
-    CGFloat red,green,blue,alpha;
-    UIColor *old = currentItem.color;
-    [old getRed:&red green:&green blue:&blue alpha:&alpha];
-    alpha /= 2;
-    UIColor *newColor = [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
-    
-    CGFloat startPercnetage = [self startPercentageForItemAtIndex:index];
-    CGFloat endPercentage   = [self endPercentageForItemAtIndex:index];
-    self.sectorHighlight =	[self newCircleLayerWithRadius:_outerCircleRadius + 5
-                                              borderWidth:10
-                                                fillColor:[UIColor clearColor]
-                                              borderColor:newColor
-                                          startPercentage:startPercnetage
-                                            endPercentage:endPercentage];
-    [_contentView.layer addSublayer:self.sectorHighlight];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -386,7 +431,7 @@
         x += self.legendStyle == PNLegendItemStyleStacked ? 0 : labelsize.width + beforeLabel;
         y += self.legendStyle == PNLegendItemStyleStacked ? labelsize.height : 0;
         
-
+        
         totalHeight = self.legendStyle == PNLegendItemStyleSerial ? fmaxf(totalHeight, rowMaxHeight + y) : totalHeight + labelsize.height;
         [legendViews addObject:label];
         counter ++;
@@ -411,7 +456,7 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     CGContextAddArc(context, size/2, size/ 2, size/2, 0, M_PI*2, YES);
-
+    
     
     //Set some fill color
     CGContextSetFillColorWithColor(context, color.CGColor);
@@ -432,4 +477,11 @@
     [squareImageView setFrame:CGRectMake(originX, originY, size, size)];
     return squareImageView;
 }
+
+/* Redraw the chart on autolayout */
+-(void)layoutSubviews {
+    [super layoutSubviews];
+    [self strokeChart];
+}
+
 @end
