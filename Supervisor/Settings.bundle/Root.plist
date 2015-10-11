@@ -18,7 +18,7 @@
 			<key>AutocorrectionType</key>
 			<string>No</string>
 			<key>DefaultValue</key>
-			<string>http://egate.genesys-cloud.info:8081/</string>
+			<string>https://premier.angel.com/</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>Key</key>

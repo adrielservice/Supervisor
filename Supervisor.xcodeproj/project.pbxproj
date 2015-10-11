@@ -59,6 +59,8 @@
 		13FC5DAD1BCA99B900F8DB4E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 13FC5DA91BCA99B900F8DB4E /* Settings.bundle */; settings = {ASSET_TAGS = (); }; };
 		13FC5DAE1BCA99B900F8DB4E /* Sip EP Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13FC5DAA1BCA99B900F8DB4E /* Sip EP Config.plist */; settings = {ASSET_TAGS = (); }; };
 		13FC5DAF1BCA99B900F8DB4E /* Supervisor SIPEP-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13FC5DAB1BCA99B900F8DB4E /* Supervisor SIPEP-Info.plist */; settings = {ASSET_TAGS = (); }; };
+		13FC5DB61BCAA15200F8DB4E /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13FC5DB41BCAA15200F8DB4E /* Main_iPad.storyboard */; settings = {ASSET_TAGS = (); }; };
+		13FC5DB71BCAA15200F8DB4E /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13FC5DB51BCAA15200F8DB4E /* Main_iPhone.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +198,8 @@
 		13FC5DA91BCA99B900F8DB4E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		13FC5DAA1BCA99B900F8DB4E /* Sip EP Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sip EP Config.plist"; sourceTree = "<group>"; };
 		13FC5DAB1BCA99B900F8DB4E /* Supervisor SIPEP-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Supervisor SIPEP-Info.plist"; sourceTree = "<group>"; };
+		13FC5DB41BCAA15200F8DB4E /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		13FC5DB51BCAA15200F8DB4E /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		16135FA461CFACA3E8D48582 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B6560F6648226F14248EB0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E6027F700E973ED8F24FD102 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +260,8 @@
 		138368FB1AF145C00096CB21 /* Supervisor */ = {
 			isa = PBXGroup;
 			children = (
+				13FC5DB41BCAA15200F8DB4E /* Main_iPad.storyboard */,
+				13FC5DB51BCAA15200F8DB4E /* Main_iPhone.storyboard */,
 				13FC5D671BCA993500F8DB4E /* UI */,
 				139E56C71BBFBA1200EAEC4F /* RestAPI */,
 				138369001AF145C00096CB21 /* AppDelegate.h */,
@@ -584,6 +590,8 @@
 				13FC5DAE1BCA99B900F8DB4E /* Sip EP Config.plist in Resources */,
 				13FC5DAD1BCA99B900F8DB4E /* Settings.bundle in Resources */,
 				13FC5DAF1BCA99B900F8DB4E /* Supervisor SIPEP-Info.plist in Resources */,
+				13FC5DB71BCAA15200F8DB4E /* Main_iPhone.storyboard in Resources */,
+				13FC5DB61BCAA15200F8DB4E /* Main_iPad.storyboard in Resources */,
 				1383690D1AF145C00096CB21 /* LaunchScreen.xib in Resources */,
 				1383690A1AF145C00096CB21 /* Images.xcassets in Resources */,
 			);
