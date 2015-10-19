@@ -13,11 +13,6 @@
 	return self;
 }
 
-- (void)dealloc
-{
-    [m_array release];
-    [super dealloc];
-}
 
 - (void)addObject:(id)object
 {
@@ -35,9 +30,9 @@
 	{
 		if ([m_array count] == 0)
 			return nil;
-		id object = [[m_array objectAtIndex:0] retain];
+		id object = m_array[0];
 		[m_array removeObjectAtIndex:0];
-		return [object autorelease];
+		return object;
 	}
 }
 

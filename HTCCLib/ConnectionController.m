@@ -7,9 +7,9 @@
 //
 
 #import "ConnectionController.h"
-#import <DDCometClient/DDCometClient.h>
-#import <DDCometClient/DDCometMessage.h>
-#import <DDCometClient/DDCometSubscription.h>
+#import "DDCometClient.h"
+#import "DDCometMessage.h"
+#import "DDCometSubscription.h"
 #import "xCSRF.h"
 
 @interface ConnectionController () <DDCometClientDelegate>
@@ -53,8 +53,7 @@
 }
 
 - (void)disconnectSynchronous {
-    // @DB - it is not a public interface
-    // [comet disconnectSynchronous];
+    [comet disconnectSynchronous];
 }
 
 - (void)disconnect {
@@ -136,9 +135,7 @@
             if (headers[@"X-CSRF-HEADER"] && headers[headers[@"X-CSRF-HEADER"]]) {
                 csrf.headerName = headers[@"X-CSRF-HEADER"];
                 csrf.headerValue = headers[csrf.headerName];
-                
-                // @DB - Why was this introduced?
-                // comet.csrf = csrf;
+                comet.csrf = csrf;
             }
             
             NSString *responseStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -246,9 +243,8 @@
 	[self logRequest:[NSString stringWithFormat:@"CometD Connect failed, error: %@", message.error] direction:fromHTCC];
     if ([message.advice[@"reconnect"] isKindOfClass:[NSString class]] && [message.advice[@"reconnect"] isEqualToString:@"handshake"]) {
         [self logRequest:@"CometD reconnect handshake advice received" direction:fromHTCC];
-        
-        
-        // @DB - It is not a public interface
+       
+        // @DB - not a public API
         // [comet stop];
         
         double delayInSeconds = 1.0;

@@ -25,7 +25,6 @@
 		139E56CA1BBFBA6E00EAEC4F /* VCCApiMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 139E56C91BBFBA6E00EAEC4F /* VCCApiMgr.m */; settings = {ASSET_TAGS = (); }; };
 		139E56CE1BBFBB0E00EAEC4F /* UserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 139E56CD1BBFBB0E00EAEC4F /* UserSession.m */; settings = {ASSET_TAGS = (); }; };
 		139E56D11BBFBC1300EAEC4F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 139E56CF1BBFBC1300EAEC4F /* User.m */; settings = {ASSET_TAGS = (); }; };
-		13FC5D411BC9936C00F8DB4E /* libDDCometClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13FC5D401BC9936C00F8DB4E /* libDDCometClient.a */; };
 		13FC5D561BC996C800F8DB4E /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5D481BC996C800F8DB4E /* Channel.m */; settings = {ASSET_TAGS = (); }; };
 		13FC5D571BC996C800F8DB4E /* ConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5D4A1BC996C800F8DB4E /* ConnectionController.m */; settings = {ASSET_TAGS = (); }; };
 		13FC5D581BC996C800F8DB4E /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5D4C1BC996C800F8DB4E /* Contact.m */; settings = {ASSET_TAGS = (); }; };
@@ -33,8 +32,6 @@
 		13FC5D5A1BC996C800F8DB4E /* Interaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5D511BC996C800F8DB4E /* Interaction.m */; settings = {ASSET_TAGS = (); }; };
 		13FC5D5B1BC996C800F8DB4E /* Me.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5D531BC996C800F8DB4E /* Me.m */; settings = {ASSET_TAGS = (); }; };
 		13FC5D5C1BC996C800F8DB4E /* NSArray+HTCC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5D551BC996C800F8DB4E /* NSArray+HTCC.m */; settings = {ASSET_TAGS = (); }; };
-		13FC5D611BC9975600F8DB4E /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5D5E1BC9975600F8DB4E /* ISO8601DateFormatter.m */; settings = {ASSET_TAGS = (); }; };
-		13FC5D621BC9975600F8DB4E /* xCSRF.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5D601BC9975600F8DB4E /* xCSRF.m */; settings = {ASSET_TAGS = (); }; };
 		13FC5D921BCA993500F8DB4E /* CallsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5D691BCA993500F8DB4E /* CallsPageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		13FC5D931BCA993500F8DB4E /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5D6B1BCA993500F8DB4E /* CallViewController.m */; settings = {ASSET_TAGS = (); }; };
 		13FC5D941BCA993500F8DB4E /* ChatsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5D6D1BCA993500F8DB4E /* ChatsPageViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -61,6 +58,15 @@
 		13FC5DAF1BCA99B900F8DB4E /* Supervisor SIPEP-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13FC5DAB1BCA99B900F8DB4E /* Supervisor SIPEP-Info.plist */; settings = {ASSET_TAGS = (); }; };
 		13FC5DB61BCAA15200F8DB4E /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13FC5DB41BCAA15200F8DB4E /* Main_iPad.storyboard */; settings = {ASSET_TAGS = (); }; };
 		13FC5DB71BCAA15200F8DB4E /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13FC5DB51BCAA15200F8DB4E /* Main_iPhone.storyboard */; settings = {ASSET_TAGS = (); }; };
+		13FC5DDA1BD47C7B00F8DB4E /* DDArrayQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5DC81BD47C7B00F8DB4E /* DDArrayQueue.m */; settings = {ASSET_TAGS = (); }; };
+		13FC5DDB1BD47C7B00F8DB4E /* DDCometClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5DCA1BD47C7B00F8DB4E /* DDCometClient.m */; settings = {ASSET_TAGS = (); }; };
+		13FC5DDC1BD47C7B00F8DB4E /* DDCometLongPollingTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5DCC1BD47C7B00F8DB4E /* DDCometLongPollingTransport.m */; settings = {ASSET_TAGS = (); }; };
+		13FC5DDD1BD47C7B00F8DB4E /* DDCometMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5DCE1BD47C7B00F8DB4E /* DDCometMessage.m */; settings = {ASSET_TAGS = (); }; };
+		13FC5DDE1BD47C7B00F8DB4E /* DDCometSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5DD01BD47C7B00F8DB4E /* DDCometSubscription.m */; settings = {ASSET_TAGS = (); }; };
+		13FC5DDF1BD47C7B00F8DB4E /* DDConcurrentQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5DD21BD47C7B00F8DB4E /* DDConcurrentQueue.m */; settings = {ASSET_TAGS = (); }; };
+		13FC5DE01BD47C7B00F8DB4E /* DDQueueProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5DD51BD47C7B00F8DB4E /* DDQueueProcessor.m */; settings = {ASSET_TAGS = (); }; };
+		13FC5DE11BD47C7B00F8DB4E /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5DD71BD47C7B00F8DB4E /* ISO8601DateFormatter.m */; settings = {ASSET_TAGS = (); }; };
+		13FC5DE21BD47C7B00F8DB4E /* xCSRF.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FC5DD91BD47C7B00F8DB4E /* xCSRF.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,8 +139,6 @@
 		139E56CD1BBFBB0E00EAEC4F /* UserSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSession.m; path = RestAPI/Models/UserSession.m; sourceTree = "<group>"; };
 		139E56CF1BBFBC1300EAEC4F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = RestAPI/Models/User.m; sourceTree = "<group>"; };
 		139E56D01BBFBC1300EAEC4F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = RestAPI/Models/User.h; sourceTree = "<group>"; };
-		13FC5D401BC9936C00F8DB4E /* libDDCometClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDDCometClient.a; path = "Pods/../build/Debug-iphoneos/libDDCometClient.a"; sourceTree = "<group>"; };
-		13FC5D421BC9938100F8DB4E /* libHTCCLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHTCCLib.a; path = "HTCCLib/build/Debug-iphoneos/libHTCCLib.a"; sourceTree = "<group>"; };
 		13FC5D471BC996C800F8DB4E /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
 		13FC5D481BC996C800F8DB4E /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
 		13FC5D491BC996C800F8DB4E /* ConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionController.h; sourceTree = "<group>"; };
@@ -150,10 +154,6 @@
 		13FC5D531BC996C800F8DB4E /* Me.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Me.m; sourceTree = "<group>"; };
 		13FC5D541BC996C800F8DB4E /* NSArray+HTCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HTCC.h"; sourceTree = "<group>"; };
 		13FC5D551BC996C800F8DB4E /* NSArray+HTCC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HTCC.m"; sourceTree = "<group>"; };
-		13FC5D5D1BC9975600F8DB4E /* ISO8601DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISO8601DateFormatter.h; sourceTree = "<group>"; };
-		13FC5D5E1BC9975600F8DB4E /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISO8601DateFormatter.m; sourceTree = "<group>"; };
-		13FC5D5F1BC9975600F8DB4E /* xCSRF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xCSRF.h; sourceTree = "<group>"; };
-		13FC5D601BC9975600F8DB4E /* xCSRF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xCSRF.m; sourceTree = "<group>"; };
 		13FC5D681BCA993500F8DB4E /* CallsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallsPageViewController.h; sourceTree = "<group>"; };
 		13FC5D691BCA993500F8DB4E /* CallsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallsPageViewController.m; sourceTree = "<group>"; };
 		13FC5D6A1BCA993500F8DB4E /* CallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallViewController.h; sourceTree = "<group>"; };
@@ -200,6 +200,26 @@
 		13FC5DAB1BCA99B900F8DB4E /* Supervisor SIPEP-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Supervisor SIPEP-Info.plist"; sourceTree = "<group>"; };
 		13FC5DB41BCAA15200F8DB4E /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		13FC5DB51BCAA15200F8DB4E /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		13FC5DC41BD47BC500F8DB4E /* cometd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = cometd.framework; path = cometd/cometd/cometd.framework; sourceTree = "<group>"; };
+		13FC5DC71BD47C7B00F8DB4E /* DDArrayQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDArrayQueue.h; path = DDCometClient/DDArrayQueue.h; sourceTree = "<group>"; };
+		13FC5DC81BD47C7B00F8DB4E /* DDArrayQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDArrayQueue.m; path = DDCometClient/DDArrayQueue.m; sourceTree = "<group>"; };
+		13FC5DC91BD47C7B00F8DB4E /* DDCometClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCometClient.h; path = DDCometClient/DDCometClient.h; sourceTree = "<group>"; };
+		13FC5DCA1BD47C7B00F8DB4E /* DDCometClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCometClient.m; path = DDCometClient/DDCometClient.m; sourceTree = "<group>"; };
+		13FC5DCB1BD47C7B00F8DB4E /* DDCometLongPollingTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCometLongPollingTransport.h; path = DDCometClient/DDCometLongPollingTransport.h; sourceTree = "<group>"; };
+		13FC5DCC1BD47C7B00F8DB4E /* DDCometLongPollingTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCometLongPollingTransport.m; path = DDCometClient/DDCometLongPollingTransport.m; sourceTree = "<group>"; };
+		13FC5DCD1BD47C7B00F8DB4E /* DDCometMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCometMessage.h; path = DDCometClient/DDCometMessage.h; sourceTree = "<group>"; };
+		13FC5DCE1BD47C7B00F8DB4E /* DDCometMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCometMessage.m; path = DDCometClient/DDCometMessage.m; sourceTree = "<group>"; };
+		13FC5DCF1BD47C7B00F8DB4E /* DDCometSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCometSubscription.h; path = DDCometClient/DDCometSubscription.h; sourceTree = "<group>"; };
+		13FC5DD01BD47C7B00F8DB4E /* DDCometSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCometSubscription.m; path = DDCometClient/DDCometSubscription.m; sourceTree = "<group>"; };
+		13FC5DD11BD47C7B00F8DB4E /* DDConcurrentQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDConcurrentQueue.h; path = DDCometClient/DDConcurrentQueue.h; sourceTree = "<group>"; };
+		13FC5DD21BD47C7B00F8DB4E /* DDConcurrentQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDConcurrentQueue.m; path = DDCometClient/DDConcurrentQueue.m; sourceTree = "<group>"; };
+		13FC5DD31BD47C7B00F8DB4E /* DDQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDQueue.h; path = DDCometClient/DDQueue.h; sourceTree = "<group>"; };
+		13FC5DD41BD47C7B00F8DB4E /* DDQueueProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDQueueProcessor.h; path = DDCometClient/DDQueueProcessor.h; sourceTree = "<group>"; };
+		13FC5DD51BD47C7B00F8DB4E /* DDQueueProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDQueueProcessor.m; path = DDCometClient/DDQueueProcessor.m; sourceTree = "<group>"; };
+		13FC5DD61BD47C7B00F8DB4E /* ISO8601DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISO8601DateFormatter.h; path = DDCometClient/ISO8601DateFormatter.h; sourceTree = "<group>"; };
+		13FC5DD71BD47C7B00F8DB4E /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISO8601DateFormatter.m; path = DDCometClient/ISO8601DateFormatter.m; sourceTree = "<group>"; };
+		13FC5DD81BD47C7B00F8DB4E /* xCSRF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xCSRF.h; path = DDCometClient/xCSRF.h; sourceTree = "<group>"; };
+		13FC5DD91BD47C7B00F8DB4E /* xCSRF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = xCSRF.m; path = DDCometClient/xCSRF.m; sourceTree = "<group>"; };
 		16135FA461CFACA3E8D48582 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B6560F6648226F14248EB0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E6027F700E973ED8F24FD102 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -210,7 +230,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13FC5D411BC9936C00F8DB4E /* libDDCometClient.a in Frameworks */,
 				1025E78CC9924AA460D61AB7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +254,7 @@
 		138368F01AF145C00096CB21 = {
 			isa = PBXGroup;
 			children = (
+				13FC5DC61BD47C6900F8DB4E /* DDCometClient */,
 				13FC5D461BC996C800F8DB4E /* HTCCLib */,
 				138368FB1AF145C00096CB21 /* Supervisor */,
 				138369151AF145C00096CB21 /* SupervisorTests */,
@@ -370,10 +390,6 @@
 		13FC5D461BC996C800F8DB4E /* HTCCLib */ = {
 			isa = PBXGroup;
 			children = (
-				13FC5D5D1BC9975600F8DB4E /* ISO8601DateFormatter.h */,
-				13FC5D5E1BC9975600F8DB4E /* ISO8601DateFormatter.m */,
-				13FC5D5F1BC9975600F8DB4E /* xCSRF.h */,
-				13FC5D601BC9975600F8DB4E /* xCSRF.m */,
 				13FC5D471BC996C800F8DB4E /* Channel.h */,
 				13FC5D481BC996C800F8DB4E /* Channel.m */,
 				13FC5D491BC996C800F8DB4E /* ConnectionController.h */,
@@ -440,6 +456,32 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		13FC5DC61BD47C6900F8DB4E /* DDCometClient */ = {
+			isa = PBXGroup;
+			children = (
+				13FC5DC71BD47C7B00F8DB4E /* DDArrayQueue.h */,
+				13FC5DC81BD47C7B00F8DB4E /* DDArrayQueue.m */,
+				13FC5DC91BD47C7B00F8DB4E /* DDCometClient.h */,
+				13FC5DCA1BD47C7B00F8DB4E /* DDCometClient.m */,
+				13FC5DCB1BD47C7B00F8DB4E /* DDCometLongPollingTransport.h */,
+				13FC5DCC1BD47C7B00F8DB4E /* DDCometLongPollingTransport.m */,
+				13FC5DCD1BD47C7B00F8DB4E /* DDCometMessage.h */,
+				13FC5DCE1BD47C7B00F8DB4E /* DDCometMessage.m */,
+				13FC5DCF1BD47C7B00F8DB4E /* DDCometSubscription.h */,
+				13FC5DD01BD47C7B00F8DB4E /* DDCometSubscription.m */,
+				13FC5DD11BD47C7B00F8DB4E /* DDConcurrentQueue.h */,
+				13FC5DD21BD47C7B00F8DB4E /* DDConcurrentQueue.m */,
+				13FC5DD31BD47C7B00F8DB4E /* DDQueue.h */,
+				13FC5DD41BD47C7B00F8DB4E /* DDQueueProcessor.h */,
+				13FC5DD51BD47C7B00F8DB4E /* DDQueueProcessor.m */,
+				13FC5DD61BD47C7B00F8DB4E /* ISO8601DateFormatter.h */,
+				13FC5DD71BD47C7B00F8DB4E /* ISO8601DateFormatter.m */,
+				13FC5DD81BD47C7B00F8DB4E /* xCSRF.h */,
+				13FC5DD91BD47C7B00F8DB4E /* xCSRF.m */,
+			);
+			name = DDCometClient;
+			sourceTree = "<group>";
+		};
 		2A0A19502F0F956A39944D07 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,8 +494,7 @@
 		A5AA6A7B2F74C059E82554B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				13FC5D421BC9938100F8DB4E /* libHTCCLib.a */,
-				13FC5D401BC9936C00F8DB4E /* libDDCometClient.a */,
+				13FC5DC41BD47BC500F8DB4E /* cometd.framework */,
 				16135FA461CFACA3E8D48582 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -663,15 +704,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				13FC5DA11BCA993500F8DB4E /* MeViewController.m in Sources */,
+				13FC5DDA1BD47C7B00F8DB4E /* DDArrayQueue.m in Sources */,
+				13FC5DDC1BD47C7B00F8DB4E /* DDCometLongPollingTransport.m in Sources */,
+				13FC5DDF1BD47C7B00F8DB4E /* DDConcurrentQueue.m in Sources */,
 				13FC5D971BCA993500F8DB4E /* ConfChatTableViewController.m in Sources */,
 				138369051AF145C00096CB21 /* ViewController.m in Sources */,
+				13FC5DE21BD47C7B00F8DB4E /* xCSRF.m in Sources */,
+				13FC5DDE1BD47C7B00F8DB4E /* DDCometSubscription.m in Sources */,
 				13FC5D561BC996C800F8DB4E /* Channel.m in Sources */,
 				138369021AF145C00096CB21 /* AppDelegate.m in Sources */,
 				13FC5D9E1BCA993500F8DB4E /* LoginViewController.m in Sources */,
+				13FC5DE01BD47C7B00F8DB4E /* DDQueueProcessor.m in Sources */,
 				13FC5D5C1BC996C800F8DB4E /* NSArray+HTCC.m in Sources */,
+				13FC5DDD1BD47C7B00F8DB4E /* DDCometMessage.m in Sources */,
 				13FC5D591BC996C800F8DB4E /* Device.m in Sources */,
 				13FC5D5A1BC996C800F8DB4E /* Interaction.m in Sources */,
-				13FC5D621BC9975600F8DB4E /* xCSRF.m in Sources */,
 				139E56D11BBFBC1300EAEC4F /* User.m in Sources */,
 				139E56CA1BBFBA6E00EAEC4F /* VCCApiMgr.m in Sources */,
 				13FC5DA31BCA993500F8DB4E /* RMPhoneFormat.m in Sources */,
@@ -684,15 +731,16 @@
 				13FC5D9C1BCA993500F8DB4E /* EmailViewController.m in Sources */,
 				138368FF1AF145C00096CB21 /* main.m in Sources */,
 				13FC5D931BCA993500F8DB4E /* CallViewController.m in Sources */,
+				13FC5DDB1BD47C7B00F8DB4E /* DDCometClient.m in Sources */,
 				13FC5D5B1BC996C800F8DB4E /* Me.m in Sources */,
 				13FC5D951BCA993500F8DB4E /* ChatViewController.m in Sources */,
 				13FC5D581BC996C800F8DB4E /* Contact.m in Sources */,
 				13FC5D991BCA993500F8DB4E /* DTMFViewController.m in Sources */,
+				13FC5DE11BD47C7B00F8DB4E /* ISO8601DateFormatter.m in Sources */,
 				13FC5DA41BCA993500F8DB4E /* SoundEffect.m in Sources */,
 				13FC5D981BCA993500F8DB4E /* CorePlot.m in Sources */,
 				139E56CE1BBFBB0E00EAEC4F /* UserSession.m in Sources */,
 				13FC5D941BCA993500F8DB4E /* ChatsPageViewController.m in Sources */,
-				13FC5D611BC9975600F8DB4E /* ISO8601DateFormatter.m in Sources */,
 				13FC5DA71BCA993500F8DB4E /* UIAlertViewBlock.m in Sources */,
 				13FC5D9D1BCA993500F8DB4E /* iPadUserDataViewController.m in Sources */,
 				13FC5D9B1BCA993500F8DB4E /* EmailsPageViewController.m in Sources */,
@@ -785,7 +833,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -829,7 +877,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -851,6 +899,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/cometd/cometd",
+				);
 				INFOPLIST_FILE = Supervisor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -869,6 +921,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/cometd/cometd",
+				);
 				INFOPLIST_FILE = Supervisor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

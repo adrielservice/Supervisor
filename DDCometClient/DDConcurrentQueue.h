@@ -12,9 +12,9 @@
 @interface DDConcurrentQueue : NSObject <DDQueue>
 {
 @private
-	DDConcurrentQueueNode * volatile m_head;
-	DDConcurrentQueueNode * volatile m_tail;
-	id<DDQueueDelegate> m_delegate;
+    DDConcurrentQueueNode * volatile m_head;
+    DDConcurrentQueueNode * volatile m_tail;
+    id<DDQueueDelegate> m_delegate;
 }
 
 @end
