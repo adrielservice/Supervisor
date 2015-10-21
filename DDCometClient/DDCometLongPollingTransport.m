@@ -168,6 +168,9 @@ static void * const timestampKey = (void*)&timestampKey;
     if (m_client.gmsUserHeader) {
         [request setValue:m_client.gmsUserHeader forHTTPHeaderField:@"gms_user"];
     }
+    if (m_client.csrf && m_client.csrf.headerName && m_client.csrf.headerValue) {
+        [request setValue:m_client.csrf.headerValue forHTTPHeaderField:m_client.csrf.headerName];
+    }
     [request setHTTPBody:body];
     [request setTimeoutInterval:self.timeoutInterval];
     return request;
